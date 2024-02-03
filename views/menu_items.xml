@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Odoo Module to Integrate NTBIES Services
+    Streamlining data extraction from invoices, vendor bills, and prefilling business contact information.
+    Copyright (C) 2024 Gerry Ntabuhashe for NTBIES SRL
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<odoo>
+  <menuitem
+    id="menu_ntbies_services_vendor_menu"
+    parent="account.menu_finance_reports"
+    name="Digitization"
+    sequence="120"
+  >
+    <menuitem
+      id="menu_document_extract"
+      name="Vendor Bills Extraction"
+      action="action_document_extract"
+      sequence="1"
+    />
+  </menuitem>
+</odoo>

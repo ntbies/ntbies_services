@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Odoo Module to Integrate NTBIES Services
+    Streamlining data extraction from invoices, vendor bills, and prefilling business contact information.
+    Copyright (C) 2024 Gerry Ntabuhashe for NTBIES SRL
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<odoo>
+  <record id="view_document_extract_form" model="ir.ui.view">
+    <field name="name">document.extract.form</field>
+    <field name="model">ntbies.document.extract</field>
+    <field name="arch" type="xml">
+      <form create="false" edit="true" duplicate="duplicate">
+        <header>
+          <field name="can_extract" invisible="1" />
+          <field name="is_readonly" invisible="1" />
+          <button
+            class="btn-primary"
+            name="run_extraction"
+            type="object"
+            invisible="status not in ['new','error'] or not can_extract"
+            string="Run Extraction"
+          />
+          <button
+            class="btn-warning"
+            name="check_extraction"
+            type="object"
+            invisible="not reference or status != 'processing'"
+            string="Check Extraction"
+          />
+          <button
+            class="btn-warning"
+            confirm="You are about to generate the record in the system. Once done, this file can't be modified. Proceed?"
+            name="dispatch"
+            type="object"
+            invisible="not reference or status != 'extracted'"
+            string="Generate Record"
+          />
+          <field
+            name="status"
+            widget="statusbar"
+            statusbar_visible="new,processing,processed,extracted,error"
+          />
+        </header>
+        <sheet>
+          <div
+            name="button_box"
+            class="oe_button_box"
+            invisible="status in ['new', 'processing', 'error']"
+          >
+            <button
+              class="oe_stat_button"
+              type="object"
+              name="placeholder_button"
+              icon="fa-eur"
+            >
+              <field string="Amount" name="total_amount" widget="statinfo" />
+            </button>
+          </div>
+          <group>
+            <group>
+              <field name="attachment_id" readonly="1" options="{'no_open': True}" />
+              <field name="document_type" readonly="1" />
+              <field name="status" readonly="is_readonly" />
+              <field
+                name="bill_id"
+                readonly="1"
+                invisible="expense_id or not bill_id"
+              />
+              <field
+                name="expense_id"
+                readonly="1"
+                invisible="bill_id or not expense_id"
+              />
+            </group>
+            <group>
+              <field
+                name="buyer_id"
+                readonly="1"
+                invisible="status in ['new', 'processing', 'error'] or not buyer_id"
+                options="{'no_open': True}"
+              />
+              <field name="extraction_date" readonly="1" />
+              <field name="pages" readonly="1" />
+              <field name="reference" readonly="1" invisible="not reference" />
+            </group>
+          </group>
+          <group
+            string="Expense information"
+            invisible="status in ['new', 'processing', 'error'] or not extracted_expense_id"
+          >
+            <field name="extracted_expense_id" invisible="1" />
+            <group>
+              <field name="document_date" string="Expense Date" readonly="1" />
+              <field name="document_reference" readonly="1" />
+              <field name="currency" string="Currency" readonly="1" class="me-3" />
+              <field name="total_amount" string="Total Amount" readonly="1" />
+            </group>
+            <group>
+              <field name="exp_description" string="Description" readonly="1" />
+              <field name="exp_category" string="Category" readonly="1" class="me-3" />
+              <field name="exp_country" string="Country" readonly="1" />
+            </group>
+          </group>
+          <group>
+            <group
+              name="vendor"
+              string="Vendor"
+              invisible="status in ['new', 'processing', 'error'] or not vendor_id"
+            >
+              <field name="vendor_id" invisible="1" />
+              <field name="vendor_name" readonly="is_readonly" />
+              <field name="vendor_line_1" readonly="is_readonly" />
+              <field name="vendor_line_2" readonly="is_readonly" />
+              <field name="vendor_postal_code" readonly="is_readonly" />
+              <field name="vendor_city" readonly="is_readonly" />
+              <field
+                name="vendor_state"
+                invisible="not vendor_state"
+                readonly="is_readonly"
+              />
+              <field name="vendor_country" readonly="is_readonly" />
+              <field
+                name="vendor_vat_number"
+                readonly="is_readonly"
+                invisible="not vendor_vat_number"
+              />
+            </group>
+            <group
+              string="Invoice's Information"
+              invisible="status in ['new', 'processing', 'error'] or not bill_id"
+            >
+              <field name="document_reference" readonly="is_readonly" />
+              <field name="document_date" readonly="is_readonly" />
+              <field name="due_date" readonly="is_readonly" />
+              <field name="currency" readonly="1" class="me-3" />
+              <field name="total_vat_excluded" readonly="1" />
+              <field name="vat_amount" readonly="1" />
+              <field name="total_amount" readonly="1" />
+            </group>
+          </group>
+          <group
+            string="Document lines"
+            invisible="status in ['new', 'processing', 'error'] or not reference or not line_ids"
+          >
+            <field name="line_ids" readonly="1">
+              <tree create="false" delete="false" editable="top">
+                <field name="description" />
+                <field name="price" />
+                <field name="quantity" />
+                <field name="tax" />
+                <field name="amount" />
+              </tree>
+            </field>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+          <field name="message_follower_ids" />
+          <field name="activity_ids" />
+          <field name="message_ids" options="{'post_refresh': 'always'}" />
+        </div>
+        <div class="o_attachment_preview" />
+      </form>
+    </field>
+  </record>
+  <record id="view_document_extract_search" model="ir.ui.view">
+    <field name="name">document.extract.search</field>
+    <field name="model">ntbies.document.extract</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name" />
+        <field name="reference" />
+        <field name="vendor_id" />
+      </search>
+    </field>
+  </record>
+  <record id="view_document_extract_list" model="ir.ui.view">
+    <field name="name">document.extract.list</field>
+    <field name="model">ntbies.document.extract</field>
+    <field name="arch" type="xml">
+      <tree create="false" duplicate="false">
+        <field name="name" readonly="true" />
+        <field
+          name="status"
+          readonly="1"
+          widget="badge"
+          decoration-info="status in ('processing','extracted')"
+          decoration-danger="status == 'error'"
+          decoration-success="status == 'processed'"
+        />
+        <field name="document_type" readonly="1" />
+        <field name="reference" readonly="1" />
+        <field name="total_amount" readonly="1" />
+        <field name="currency" readonly="1" />
+        <field name="attachment_id" optional="1" />
+      </tree>
+    </field>
+  </record>
+  <record id="action_document_extract" model="ir.actions.act_window">
+    <field name="name">Documents</field>
+    <field name="res_model">ntbies.document.extract</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('document_type', '=', 'bill')]</field>
+    <field name="view_id" ref="view_document_extract_list" />
+  </record>
+  <record id="action_process_document_run_extract" model="ir.actions.server">
+    <field name="name">Run Extraction</field>
+    <field name="model_id" ref="model_ntbies_document_extract" />
+    <field name="state">code</field>
+    <field name="code">
+            action = records.run_extraction()
+        </field>
+    <field name="binding_model_id" ref="model_ntbies_document_extract" />
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list</field>
+  </record>
+</odoo>
