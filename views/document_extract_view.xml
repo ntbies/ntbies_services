@@ -30,14 +30,14 @@
             class="btn-primary"
             name="run_extraction"
             type="object"
-            invisible="status not in ['new','error'] or not can_extract"
+            attrs="{'invisible': ['|',('status', 'not in', ['new','error']),('can_extract', '=', False)]}"
             string="Run Extraction"
           />
           <button
             class="btn-warning"
             name="check_extraction"
             type="object"
-            invisible="not reference or status != 'processing'"
+            attrs="{'invisible': ['|',('reference', '=', False),('status', '!=', 'processing')]}"
             string="Check Extraction"
           />
           <button
@@ -45,7 +45,7 @@
             confirm="You are about to generate the record in the system. Once done, this file can't be modified. Proceed?"
             name="dispatch"
             type="object"
-            invisible="not reference or status != 'extracted'"
+            attrs="{'invisible': ['|',('reference', '=', False),('status', '!=', 'extracted')]}"
             string="Generate Record"
           />
           <field
@@ -58,7 +58,7 @@
           <div
             name="button_box"
             class="oe_button_box"
-            invisible="status in ['new', 'processing', 'error']"
+            attrs="{'invisible': [('status', 'in', ['new', 'processing', 'error'])]}"
           >
             <button
               class="oe_stat_button"
@@ -73,33 +73,37 @@
             <group>
               <field name="attachment_id" readonly="1" options="{'no_open': True}" />
               <field name="document_type" readonly="1" />
-              <field name="status" readonly="is_readonly" />
+              <field name="status" attrs="{'readonly': [('is_readonly', '=', True]}" />
               <field
                 name="bill_id"
                 readonly="1"
-                invisible="expense_id or not bill_id"
+                attrs="{'invisible': ['|',('expense_id', '!=', False),('bill_id', '=', False)]}"
               />
               <field
                 name="expense_id"
                 readonly="1"
-                invisible="bill_id or not expense_id"
+                attrs="{'invisible': ['|',('bill_id', '!=', False),('expense_id', '=', False)]}"
               />
             </group>
             <group>
               <field
                 name="buyer_id"
                 readonly="1"
-                invisible="status in ['new', 'processing', 'error'] or not buyer_id"
+                attrs="{'invisible': ['|',('status', 'in', ['new', 'processing', 'error']),('buyer_id', '=', False)]}"
                 options="{'no_open': True}"
               />
               <field name="extraction_date" readonly="1" />
               <field name="pages" readonly="1" />
-              <field name="reference" readonly="1" invisible="not reference" />
+              <field
+                name="reference"
+                readonly="1"
+                attrs="{'invisible': ('reference', '=', False)}"
+              />
             </group>
           </group>
           <group
             string="Expense information"
-            invisible="status in ['new', 'processing', 'error'] or not extracted_expense_id"
+            attrs="{'invisible': ['|',('status', 'in', ['new', 'processing', 'error']), ('extracted_expense_id', '=', False) ]}"
           >
             <field name="extracted_expense_id" invisible="1" />
             <group>
@@ -118,33 +122,58 @@
             <group
               name="vendor"
               string="Vendor"
-              invisible="status in ['new', 'processing', 'error'] or not vendor_id"
+              attrs="{'invisible': ['|',('status','in',['new','processing','error']), ('vendor_id', '=', False)]}"
             >
               <field name="vendor_id" invisible="1" />
-              <field name="vendor_name" readonly="is_readonly" />
-              <field name="vendor_line_1" readonly="is_readonly" />
-              <field name="vendor_line_2" readonly="is_readonly" />
-              <field name="vendor_postal_code" readonly="is_readonly" />
-              <field name="vendor_city" readonly="is_readonly" />
+              <field
+                name="vendor_name"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
+              <field
+                name="vendor_line_1"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
+              <field
+                name="vendor_line_2"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
+              <field
+                name="vendor_postal_code"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
+              <field
+                name="vendor_city"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
               <field
                 name="vendor_state"
-                invisible="not vendor_state"
-                readonly="is_readonly"
+                attrs="{'invisible': [('vendor_state', '=', False)], 'readonly': [('is_readonly', '=', True)]}"
               />
-              <field name="vendor_country" readonly="is_readonly" />
+              <field
+                name="vendor_country"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
               <field
                 name="vendor_vat_number"
-                readonly="is_readonly"
-                invisible="not vendor_vat_number"
+                attrs="{'invisible': [('vendor_vat_number', '=', False), ],'readonly': [('is_readonly', '=', True]}"
               />
             </group>
             <group
               string="Invoice's Information"
-              invisible="status in ['new', 'processing', 'error'] or not bill_id"
+              attrs="{'invisible': ['|',('status', 'in', ['new', 'processing', 'error']),('bill_id', '=', False)]}"
             >
-              <field name="document_reference" readonly="is_readonly" />
-              <field name="document_date" readonly="is_readonly" />
-              <field name="due_date" readonly="is_readonly" />
+              <field
+                name="document_reference"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
+              <field
+                name="document_date"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
+              <field
+                name="due_date"
+                attrs="{'readonly': [('is_readonly', '=', True]}"
+              />
               <field name="currency" readonly="1" class="me-3" />
               <field name="total_vat_excluded" readonly="1" />
               <field name="vat_amount" readonly="1" />
@@ -153,7 +182,7 @@
           </group>
           <group
             string="Document lines"
-            invisible="status in ['new', 'processing', 'error'] or not reference or not line_ids"
+            attrs="{'invisible': ['|', '|',('status', 'in', ['new', 'processing', 'error']), ('reference', '=', False), ('line_ids', '=', False)]}"
           >
             <field name="line_ids" readonly="1">
               <tree create="false" delete="false" editable="top">

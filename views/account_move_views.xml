@@ -41,14 +41,14 @@
           string='Extract'
           type='object'
           groups="account.group_account_invoice"
-          invisible="move_type not in ('in_invoice') or document_extract_id or state  != 'draft'"
+          attrs="{invisible: ['|','|',(move_type, '!=', 'in_invoice'), (document_extract_id,'=', False), (state, '!=', 'draft')]}"
         />
         <button
           name="ntbies_open_extraction"
           string='Extract'
           type='object'
           groups="account.group_account_invoice"
-          invisible="move_type not in ('in_invoice') or not document_extract_id"
+          attrs="{invisible: ['|', (move_type, '!=', 'in_invoice'), (document_extract_id,'=', False)]}"
         />
       </button>
     </field>
