@@ -25,7 +25,7 @@ from odoo.exceptions import UserError
 class ServiceAbstract(models.AbstractModel):
     _name = "ntbies.service"
     _description = "Ntbies Service Abstract"
-    _BASE_URL = "https://platforms.ntbies.com/api/v1"
+    _BASE_URL = "https://platform.ntbies.com/api/v1"
 
     @api.model
     def _get_headers(self, access_key):
