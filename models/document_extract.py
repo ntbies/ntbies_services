@@ -24,7 +24,7 @@ from odoo.exceptions import UserError
 class DocumentExtraction(models.Model):
     _name = "ntbies.document.extract"
     _description = "Document"
-    _inherit = ["mail.thread.main.attachment", "mail.activity.mixin"]
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _order = "id desc"
 
     name = fields.Char("Name", required=True)
@@ -43,6 +43,7 @@ class DocumentExtraction(models.Model):
         tracking=True,
         string="Status",
     )
+    state = fields.Selection(related="status")
 
     reference = fields.Char(help="Document reference on Service platform")
 

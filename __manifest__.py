@@ -17,7 +17,7 @@
 
 {
     "name": "NTBIES Services",
-    "version": "17.0.1.0.0",
+    "version": "15.0.1.0.0",
     "summary": "Comprehensive Integration of NTBIES Services",
     "author": "NTBIES SRL",
     "description": """

@@ -41,14 +41,14 @@
           string='Extract'
           type='object'
           groups="account.group_account_invoice"
-          attrs="{invisible: ['|','|',(move_type, '!=', 'in_invoice'), (document_extract_id,'=', False), (state, '!=', 'draft')]}"
+          attrs="{'invisible': ['|','|',('move_type', '!=', 'in_invoice'),('document_extract_id','!=', False),('state', '!=', 'draft')]}"
         />
         <button
           name="ntbies_open_extraction"
           string='Open the extract'
           type='object'
           groups="account.group_account_invoice"
-          attrs="{invisible: ['|', (move_type, '!=', 'in_invoice'), (document_extract_id,'=', False)]}"
+          attrs="{'invisible': ['|', ('move_type', '!=', 'in_invoice'),('document_extract_id','=', False)]}"
         />
       </button>
     </field>

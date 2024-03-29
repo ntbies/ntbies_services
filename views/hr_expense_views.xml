@@ -29,13 +29,13 @@
           name="ntbies_extract_document"
           string='Extract'
           type='object'
-          attrs="{invisible: ['|','|',(document_extract_id, '!=', False), (sheet_id,'!=', False), (state, '!=', 'draft')]}"
+          attrs="{'invisible': ['|','|',('document_extract_id', '!=', False), ('sheet_id','!=', False), ('state', '!=', 'draft')]}"
         />
         <button
           name="ntbies_open_extraction"
           string='Extract'
           type='object'
-          attrs="{invisible: [(document_extract_id, '=', False)]}"
+          attrs="{'invisible': [('document_extract_id', '=', False)]}"
         />
       </button>
     </field>
