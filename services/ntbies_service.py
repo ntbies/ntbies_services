@@ -76,9 +76,7 @@ class ServiceAbstract(models.AbstractModel):
             )
         url = "/".join([self.get_base_url(), endpoint])
         headers = self._get_headers(access_key)
-        resp = requests.post(
-            url, files=files, headers=headers, data=payload, verify=False
-        )
+        resp = requests.post(url, files=files, headers=headers, data=payload)
         if resp.status_code not in [403, 422, 425]:
             resp.raise_for_status()
         return resp.json()
