@@ -208,11 +208,18 @@
       </tree>
     </field>
   </record>
-  <record id="action_document_extract" model="ir.actions.act_window">
+  <record id="action_document_extract_bill" model="ir.actions.act_window">
     <field name="name">Documents</field>
     <field name="res_model">ntbies.document.extract</field>
     <field name="view_mode">tree,form</field>
     <field name="domain">[('document_type', '=', 'bill')]</field>
+    <field name="view_id" ref="view_document_extract_list" />
+  </record>
+  <record id="action_document_extract_expense" model="ir.actions.act_window">
+    <field name="name">Documents</field>
+    <field name="res_model">ntbies.document.extract</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('document_type', '=', 'expense')]</field>
     <field name="view_id" ref="view_document_extract_list" />
   </record>
   <record id="action_process_document_run_extract" model="ir.actions.server">

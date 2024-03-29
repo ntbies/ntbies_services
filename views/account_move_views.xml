@@ -45,7 +45,7 @@
         />
         <button
           name="ntbies_open_extraction"
-          string='Extract'
+          string='Open the extract'
           type='object'
           groups="account.group_account_invoice"
           invisible="move_type not in ('in_invoice') or not document_extract_id"
