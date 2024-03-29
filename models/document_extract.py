@@ -62,7 +62,6 @@ class DocumentExtraction(models.Model):
     due_date = fields.Date()
     extraction_date = fields.Datetime(tracking=True)
     pages = fields.Integer()
-    extracted_content = fields.Json()
 
     can_extract = fields.Boolean(compute="_compute_extract_configuration")
     auto_extract = fields.Boolean(compute="_compute_extract_configuration")
@@ -213,7 +212,6 @@ class DocumentExtraction(models.Model):
             content = resp.get("extract", {})
             data = {
                 "status": "extracted",
-                "extracted_content": content,
                 "currency": content.get("currency", False),
                 "total_amount": content.get("total_amount", False),
                 "document_date": parser.isoparse(content.get("invoice_date")).date()
@@ -293,8 +291,6 @@ class DocumentExtraction(models.Model):
         for record in self:
             if record.status != "extracted":
                 raise UserError("Document not processed yet")
-            if not record.extracted_content:
-                raise UserError("No content extracted")
             if record.document_type == "bill":
                 record.generate_bill()
             if record.document_type == "expense":
@@ -384,7 +380,7 @@ class DocumentExtraction(models.Model):
 
     @api.model
     def extract_model_for_bill(self, bill):
-        attachment = bill.message_main_attachment_id.copy()
+        attachment = bill.message_main_attachment_id
         res = {
             "bill_id": bill.id,
             "document_type": "bill",
@@ -392,13 +388,11 @@ class DocumentExtraction(models.Model):
             "name": attachment.name,
         }
         extract = self.create(res)
-        attachment.res_model = self._name
-        attachment.res_id = extract.id
         bill.document_extract_id = extract
         return extract
 
     def extract_model_for_expense(self, expense):
-        attachment = expense.message_main_attachment_id.copy()
+        attachment = expense.message_main_attachment_id
         res = {
             "expense_id": expense.id,
             "document_type": "expense",
@@ -406,7 +400,5 @@ class DocumentExtraction(models.Model):
             "name": attachment.name,
         }
         extract = self.create(res)
-        attachment.res_model = self._name
-        attachment.res_id = extract.id
         expense.document_extract_id = extract
         return extract

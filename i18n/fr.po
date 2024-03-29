@@ -261,11 +261,6 @@ msgid "Extracted Contact Abstract"
 msgstr ""
 
 #. module: ntbies_services
-#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extraction__extracted_content
-msgid "Extracted Content"
-msgstr ""
-
-#. module: ntbies_services
 #: model:ir.model,name:ntbies_services.model_ntbies_document_extract_vendor
 msgid "Extracted Vendor"
 msgstr ""
