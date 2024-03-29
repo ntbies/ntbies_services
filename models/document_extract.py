@@ -139,7 +139,7 @@ class DocumentExtraction(models.Model):
             resp = service_model.create_document(self.attachment_id, access_key)
             if resp.get("message"):
                 self.status = "error"
-                self.message_post(body=resp.message)
+                self.message_post(body=resp.get("message"))
             else:
                 self.status = "processing"
                 self.update(
@@ -272,7 +272,6 @@ class DocumentExtraction(models.Model):
                     }
                 )
                 data["extracted_expense_id"] = extracted_expense.id
-            print(data)
             self.write(data)
             self.with_delay(
                 priority=0,
