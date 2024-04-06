@@ -1,4 +1,4 @@
-# NTBIES Services for Odoo 17
+# NTBIES Services for Odoo 15
 
 ## Overview
 
@@ -8,7 +8,7 @@ NTBIES Services module for Odoo enables seamless integration with NTBIES service
 
 - Automatic data extraction from invoices and receipts.
 - Integration with NTBIES platform for advanced digitization.
-- Supports Odoo versions 17.
+- Supports Odoo versions 15.
 - Configurable settings for manual or automatic data extraction.
 - User account credit system for service usage.
 
@@ -25,7 +25,7 @@ NTBIES Services module for Odoo enables seamless integration with NTBIES service
      ```bash
      git clone https://github.com/OCA/queue.git
      ```
-   - Make sure you are on branch 17.0
+   - Make sure you are on branch 15.0
    - Follow the installation instructions provided in the `queue` repository.
 3. Clone or download the NTBIES Services module into your Odoo addons directory.
 4. Update the Odoo module list and install the NTBIES Services module through the Odoo backend interface.
