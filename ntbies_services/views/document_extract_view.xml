@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Odoo Module to Integrate NTBIES Services
+    Streamlining data extraction from invoices, vendor bills, and prefilling business contact information.
+    Copyright (C) 2024 Gerry Ntabuhashe for NTBIES SRL
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<odoo>
+  <record id="view_document_extract_form" model="ir.ui.view">
+    <field name="name">document.extract.form</field>
+    <field name="model">ntbies.document.extract</field>
+    <field name="arch" type="xml">
+      <form create="false" edit="true" duplicate="duplicate">
+        <header>
+          <field name="can_extract" invisible="1" />
+          <field name="is_readonly" invisible="1" />
+          <button
+            class="btn-primary"
+            name="run_extraction"
+            type="object"
+            invisible="status not in ['new','error'] or not can_extract"
+            string="Run Extraction"
+          />
+          <button
+            class="btn-warning"
+            name="check_extraction"
+            type="object"
+            invisible="not reference or status != 'processing'"
+            string="Check Extraction"
+          />
+          <button
+            class="btn-warning"
+            confirm="You are about to generate the record in the system. Once done, this file can't be modified. Proceed?"
+            name="dispatch"
+            type="object"
+            invisible="not reference or status != 'extracted'"
+            string="Generate Record"
+          />
+          <field
+            name="status"
+            widget="statusbar"
+            statusbar_visible="new,processing,processed,extracted,error"
+          />
+        </header>
+        <sheet>
+          <div
+            name="button_box"
+            class="oe_button_box"
+            invisible="not total_amount or status in ['new', 'processing', 'error']"
+          >
+            <button
+              class="oe_stat_button"
+              type="object"
+              name="placeholder_button"
+              icon="fa-eur"
+            >
+              <field string="Amount" name="total_amount" widget="statinfo" />
+            </button>
+          </div>
+          <group name="document_infos">
+            <group>
+              <field name="attachment_id" readonly="1" options="{'no_open': True}" />
+              <field name="document_type" readonly="1" />
+              <field name="status" readonly="is_readonly" />
+            </group>
+            <group>
+              <field name="extraction_date" readonly="1" />
+              <field name="pages" readonly="1" />
+              <field name="reference" readonly="1" invisible="not reference" />
+            </group>
+          </group>
+        </sheet>
+        <chatter />
+      </form>
+    </field>
+  </record>
+  <record id="view_document_extract_search" model="ir.ui.view">
+    <field name="name">document.extract.search</field>
+    <field name="model">ntbies.document.extract</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name" />
+        <field name="reference" />
+      </search>
+    </field>
+  </record>
+  <record id="view_document_extract_list" model="ir.ui.view">
+    <field name="name">document.extract.list</field>
+    <field name="model">ntbies.document.extract</field>
+    <field name="arch" type="xml">
+      <list create="false" duplicate="false">
+        <field name="name" readonly="true" />
+        <field
+          name="status"
+          readonly="1"
+          widget="badge"
+          decoration-info="status in ('processing','extracted')"
+          decoration-danger="status == 'error'"
+          decoration-success="status == 'processed'"
+        />
+        <field name="document_type" readonly="1" />
+        <field name="reference" readonly="1" />
+        <field name="total_amount" readonly="1" />
+        <field name="currency" readonly="1" />
+        <field name="attachment_id" optional="1" />
+      </list>
+    </field>
+  </record>
+  <record id="action_process_document_run_extract" model="ir.actions.server">
+    <field name="name">Run Extraction</field>
+    <field name="model_id" ref="model_ntbies_document_extract" />
+    <field name="state">code</field>
+    <field name="code">
+            action = records.run_extraction()
+        </field>
+    <field name="binding_model_id" ref="model_ntbies_document_extract" />
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list</field>
+  </record>
+</odoo>

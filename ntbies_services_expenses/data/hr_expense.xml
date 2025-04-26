@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <data noupdate="1">
+    <!-- sgv note - icons will be replaced. Design task is ongoing -->
+    <record id="hr_expense.expense_product_meal" model="product.product">
+      <field name="default_code">MEAL</field>
+    </record>
+    <record
+      id="hr_expense.expense_product_travel_accommodation"
+      model="product.product"
+    >
+      <field name="name">Travel</field>
+      <field name="description">Plane ticket, taxi, etc.</field>
+      <field name="default_code">TRAV</field>
+    </record>
+    <record id="expense_product_travel" model="product.product">
+      <field name="name">Accommodation</field>
+      <field name="description">Hotel</field>
+      <field name="standard_price">0.0</field>
+      <field name="type">service</field>
+      <field name="uom_id" ref="uom.product_uom_unit" />
+      <field name="uom_po_id" ref="uom.product_uom_unit" />
+      <field name="default_code">ACCO</field>
+      <field name="can_be_expensed" eval="True" />
+      <field name="sale_ok" eval="False" />
+      <field name="purchase_ok" eval="False" />
+      <field
+        name="image_1920"
+        type="base64"
+        file="hr_expense/static/img/transport.svg"
+      />
+    </record>
+    <record id="hr_expense.expense_product_mileage" model="product.product">
+      <field name="name">Mileage</field>
+      <field name="default_code">MILE</field>
+    </record>
+    <record id="hr_expense.expense_product_gift" model="product.product">
+      <field name="default_code">GIFT</field>
+    </record>
+    <record id="hr_expense.expense_product_communication" model="product.product">
+      <field name="name">Communication</field>
+      <field name="description">Phone bills, postage, etc.</field>
+      <field name="default_code">COMM</field>
+    </record>
+    <record id="hr_expense.product_product_no_cost" model="product.product">
+      <field name="name">Expenses</field>
+      <field name="standard_price">0.0</field>
+      <field name="type">service</field>
+      <field name="default_code">OTHR</field>
+      <field name="categ_id" ref="product.cat_expense" />
+      <field name="can_be_expensed" eval="True" />
+      <field name="image_1920" type="base64" file="hr_expense/static/img/other.svg" />
+    </record>
+  </data>
+</odoo>

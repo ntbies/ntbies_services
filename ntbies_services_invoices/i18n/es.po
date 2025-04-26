@@ -1,0 +1,297 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ntbies_services_invoices
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-26 05:46+0000\n"
+"PO-Revision-Date: 2025-04-26 05:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__amount
+msgid "Amount"
+msgstr "Cantidad"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__bill_id
+#: model:ir.model.fields.selection,name:ntbies_services_invoices.selection__ntbies_document_extract__document_type__bill
+#: model:ir.model.fields.selection,name:ntbies_services_invoices.selection__ntbies_document_import_wizard__document_type__bill
+msgid "Bill"
+msgstr "Factura"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_country
+msgid "Bill Country"
+msgstr "País de la factura"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__buyer_id
+msgid "Buyer"
+msgstr "Comprador"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_city
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__city
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_name
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__company_name
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__company_name
+msgid "Company Name"
+msgstr "Nombre de la empresa"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__country
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__country
+msgid "Country"
+msgstr "País"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__create_uid
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__create_uid
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__create_date
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__create_date
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__currency
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: ntbies_services_invoices
+#: model:ir.ui.menu,name:ntbies_services_invoices.menu_ntbies_services_vendor_menu
+msgid "Digitization"
+msgstr "Digitalización"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__display_name
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__display_name
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: ntbies_services_invoices
+#: model:ir.model,name:ntbies_services_invoices.model_ntbies_document_extract
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__document_id
+msgid "Document"
+msgstr "Documento"
+
+#. module: ntbies_services_invoices
+#: model_terms:ir.ui.view,arch_db:ntbies_services_invoices.view_document_extract_form
+msgid "Document lines"
+msgstr "Líneas del documento"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__document_type
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_import_wizard__document_type
+msgid "Document type"
+msgstr "Tipo de documento"
+
+#. module: ntbies_services_invoices
+#: model:ir.actions.act_window,name:ntbies_services_invoices.action_document_extract_bill
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__due_date
+msgid "Due Date"
+msgstr "Fecha de vencimiento"
+
+#. module: ntbies_services_invoices
+#: model:ir.actions.server,name:ntbies_services_invoices.action_document_parse_extract
+#: model_terms:ir.ui.view,arch_db:ntbies_services_invoices.view_account_move_form
+msgid "Extract"
+msgstr "Extraer"
+
+#. module: ntbies_services_invoices
+#: model:ir.model,name:ntbies_services_invoices.model_ntbies_document_extract_lines
+msgid "Extracted Bills Lines"
+msgstr "Líneas de facturas extraídas"
+
+#. module: ntbies_services_invoices
+#: model:ir.model,name:ntbies_services_invoices.model_ntbies_document_extract_buyer
+msgid "Extracted Buyer"
+msgstr "Comprador extraído"
+
+#. module: ntbies_services_invoices
+#: model:ir.model,name:ntbies_services_invoices.model_ntbies_document_extract_vendor
+msgid "Extracted Vendor"
+msgstr "Proveedor extraído"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_account_bank_statement_line__document_extract_id
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_account_move__document_extract_id
+msgid "Extraction document"
+msgstr "Documento de extracción"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__id
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__id
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ntbies_services_invoices
+#: model:ir.model,name:ntbies_services_invoices.model_ntbies_document_import_wizard
+msgid "Import Documents for Extraction"
+msgstr "Importar documentos para extracción"
+
+#. module: ntbies_services_invoices
+#: model_terms:ir.ui.view,arch_db:ntbies_services_invoices.view_document_extract_form
+msgid "Invoice's Information"
+msgstr "Información de la factura"
+
+#. module: ntbies_services_invoices
+#: model:ir.model,name:ntbies_services_invoices.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__write_uid
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__write_uid
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__write_date
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__write_date
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_line_1
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__line_1
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__line_1
+msgid "Line 1"
+msgstr "Línea 1"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_line_2
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__line_2
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__line_2
+msgid "Line 2"
+msgstr "Línea 2"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__line_ids
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: ntbies_services_invoices
+#: model:ir.model,name:ntbies_services_invoices.model_ntbies_service_extract_bill
+msgid "Ntbies Service Extract Bill"
+msgstr "Servicio de extracción de facturas Ntbies"
+
+#. module: ntbies_services_invoices
+#: model_terms:ir.ui.view,arch_db:ntbies_services_invoices.view_account_move_form
+msgid "Open the extract"
+msgstr "Abrir la extracción"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__partner_id
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__partner_id
+msgid "Partner"
+msgstr "Socio"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_postal_code
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__postal_code
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__postal_code
+msgid "Postal Code"
+msgstr "Código postal"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__price
+msgid "Price"
+msgstr "Precio"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_state
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__state
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__state
+msgid "State"
+msgstr "Estado"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_lines__tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: ntbies_services_invoices
+#. odoo-python
+#: code:addons/ntbies_services_invoices/models/account_move.py:0
+msgid "There is not any extraction performed for this bill"
+msgstr "No se ha realizado ninguna extracción para esta factura"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,help:ntbies_services_invoices.field_ntbies_document_extract__document_type
+msgid ""
+"This field is important as it helps to decide which extraction model should "
+"be used"
+msgstr ""
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,help:ntbies_services_invoices.field_ntbies_document_import_wizard__document_type
+msgid ""
+"This field is important as it helps to know which model to use for document "
+"processing"
+msgstr ""
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__total_vat_excluded
+msgid "Total Vat Excluded"
+msgstr "Total sin IVA"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vat_amount
+msgid "Vat Amount"
+msgstr "Importe del IVA"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_vat_number
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_buyer__vat_number
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract_vendor__vat_number
+msgid "Vat Number"
+msgstr "Número de IVA"
+
+#. module: ntbies_services_invoices
+#: model:ir.model.fields,field_description:ntbies_services_invoices.field_ntbies_document_extract__vendor_id
+#: model_terms:ir.ui.view,arch_db:ntbies_services_invoices.view_document_extract_form
+msgid "Vendor"
+msgstr "Proveedor"
+
+#. module: ntbies_services_invoices
+#: model:ir.ui.menu,name:ntbies_services_invoices.menu_document_extract_bill
+msgid "Vendor Bills Extraction"
+msgstr "Extracción de facturas de proveedor"

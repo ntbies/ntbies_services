@@ -1,0 +1,180 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ntbies_services_expenses
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-26 05:45+0000\n"
+"PO-Revision-Date: 2025-04-26 05:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ntbies_services_expenses
+#: model:product.template,name:ntbies_services_expenses.expense_product_travel_product_template
+msgid "Accommodation"
+msgstr "Alloggio"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract__exp_category
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__category
+#: model_terms:ir.ui.view,arch_db:ntbies_services_expenses.view_document_extract_form
+msgid "Category"
+msgstr "Categoria"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract__exp_country
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__country
+#: model_terms:ir.ui.view,arch_db:ntbies_services_expenses.view_document_extract_form
+msgid "Country"
+msgstr "Paese"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: ntbies_services_expenses
+#: model_terms:ir.ui.view,arch_db:ntbies_services_expenses.view_document_extract_form
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract__exp_description
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__description
+#: model_terms:ir.ui.view,arch_db:ntbies_services_expenses.view_document_extract_form
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: ntbies_services_expenses
+#: model:ir.ui.menu,name:ntbies_services_expenses.menu_ntbies_services_expense_menu
+msgid "Digitization"
+msgstr "Digitalizzazione"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: ntbies_services_expenses
+#: model:ir.model,name:ntbies_services_expenses.model_ntbies_document_extract
+msgid "Document"
+msgstr "Documento"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract__document_type
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_import_wizard__document_type
+msgid "Document type"
+msgstr "Tipo di documento"
+
+#. module: ntbies_services_expenses
+#: model:ir.actions.act_window,name:ntbies_services_expenses.action_document_extract_expense
+msgid "Documents"
+msgstr "Documenti"
+
+#. module: ntbies_services_expenses
+#: model:ir.model,name:ntbies_services_expenses.model_hr_expense
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract__expense_id
+#: model:ir.model.fields.selection,name:ntbies_services_expenses.selection__ntbies_document_extract__document_type__expense
+#: model:ir.model.fields.selection,name:ntbies_services_expenses.selection__ntbies_document_import_wizard__document_type__expense
+msgid "Expense"
+msgstr "Spesa"
+
+#. module: ntbies_services_expenses
+#: model_terms:ir.ui.view,arch_db:ntbies_services_expenses.view_document_extract_form
+msgid "Expense Date"
+msgstr "Data della spesa"
+
+#. module: ntbies_services_expenses
+#: model_terms:ir.ui.view,arch_db:ntbies_services_expenses.view_document_extract_form
+msgid "Expense information"
+msgstr "Informazioni sulla spesa"
+
+#. module: ntbies_services_expenses
+#: model:ir.ui.menu,name:ntbies_services_expenses.menu_document_extract_expense
+msgid "Expenses Extraction"
+msgstr "Estrazione delle spese"
+
+#. module: ntbies_services_expenses
+#: model_terms:ir.ui.view,arch_db:ntbies_services_expenses.view_hr_expense_form
+msgid "Extract"
+msgstr "Estrai"
+
+#. module: ntbies_services_expenses
+#: model:ir.model,name:ntbies_services_expenses.model_ntbies_document_extract_expense
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract__extracted_expense_id
+msgid "Extracted Expense"
+msgstr "Spesa estratta"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_hr_expense__document_extract_id
+msgid "Extraction document"
+msgstr "Documento di estrazione"
+
+#. module: ntbies_services_expenses
+#: model_terms:product.template,description:ntbies_services_expenses.expense_product_travel_product_template
+msgid "Hotel"
+msgstr "Hotel"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ntbies_services_expenses
+#: model:ir.model,name:ntbies_services_expenses.model_ntbies_document_import_wizard
+msgid "Import Documents for Extraction"
+msgstr "Importa documenti per l'estrazione"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,field_description:ntbies_services_expenses.field_ntbies_document_extract_expense__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: ntbies_services_expenses
+#: model:ir.model,name:ntbies_services_expenses.model_ntbies_service_extract_expense
+msgid "Ntbies Service Extract Expense"
+msgstr "Servizio Ntbies - Estrazione spese"
+
+#. module: ntbies_services_expenses
+#. odoo-python
+#: code:addons/ntbies_services_expenses/models/hr_expense.py:0
+msgid "There is no extraction performed for this expense"
+msgstr "Non è stata eseguita alcuna estrazione per questa spesa"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,help:ntbies_services_expenses.field_ntbies_document_extract__document_type
+msgid ""
+"This field is important as it helps to decide which extraction model should "
+"be used"
+msgstr ""
+"Questo campo è importante poiché aiuta a decidere quale modello di estrazione utilizzare"
+
+#. module: ntbies_services_expenses
+#: model:ir.model.fields,help:ntbies_services_expenses.field_ntbies_document_import_wizard__document_type
+msgid ""
+"This field is important as it helps to know which model to use for document "
+"processing"
+msgstr ""
+"Questo campo è importante poiché aiuta a sapere quale modello utilizzare per l'elaborazione dei documenti"
+
+#. module: ntbies_services_expenses
+#: model_terms:ir.ui.view,arch_db:ntbies_services_expenses.view_document_extract_form
+msgid "Total Amount"
+msgstr "Importo totale"

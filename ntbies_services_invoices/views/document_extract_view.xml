@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Odoo Module to Integrate NTBIES Services
+    Streamlining data extraction from invoices, vendor bills, and prefilling business contact information.
+    Copyright (C) 2024 Gerry Ntabuhashe for NTBIES SRL
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<odoo>
+  <record id="view_document_extract_form" model="ir.ui.view">
+    <field name="name">invoices.document.extract.form</field>
+    <field name="model">ntbies.document.extract</field>
+    <field name="inherit_id" ref="ntbies_services.view_document_extract_form" />
+    <field name="arch" type="xml">
+      <xpath
+        expr="//sheet/group[@name='document_infos']/group/field[@name='status']"
+        position="after"
+      >
+        <field name="bill_id" readonly="1" invisible="not bill_id" />
+      </xpath>
+      <xpath
+        expr="//sheet/group[@name='document_infos']/group/field[@name='extraction_date']"
+        position="before"
+      >
+        <field
+          name="buyer_id"
+          readonly="1"
+          invisible="status in ['new', 'processing', 'error'] or not buyer_id"
+          options="{'no_open': True}"
+        />
+      </xpath>
+      <group name="document_infos" position="after">
+        <div>
+          <group>
+            <group
+              name="vendor"
+              string="Vendor"
+              invisible="status in ['new', 'processing', 'error'] or not vendor_id"
+            >
+              <field name="vendor_id" invisible="1" />
+              <field name="vendor_name" readonly="is_readonly" />
+              <field name="vendor_line_1" readonly="is_readonly" />
+              <field name="vendor_line_2" readonly="is_readonly" />
+              <field name="vendor_postal_code" readonly="is_readonly" />
+              <field name="vendor_city" readonly="is_readonly" />
+              <field
+                name="vendor_state"
+                invisible="not vendor_state"
+                readonly="is_readonly"
+              />
+              <field name="vendor_country" readonly="is_readonly" />
+              <field
+                name="vendor_vat_number"
+                readonly="is_readonly"
+                invisible="not vendor_vat_number"
+              />
+            </group>
+            <group
+              string="Invoice's Information"
+              invisible="status in ['new', 'processing', 'error'] or not bill_id"
+            >
+              <field name="document_reference" readonly="is_readonly" />
+              <field name="document_date" readonly="is_readonly" />
+              <field name="due_date" readonly="is_readonly" />
+              <field name="currency" readonly="1" class="me-3" />
+              <field name="total_vat_excluded" readonly="1" />
+              <field name="vat_amount" readonly="1" />
+              <field name="total_amount" readonly="1" />
+            </group>
+          </group>
+          <group
+            string="Document lines"
+            invisible="status in ['new', 'processing', 'error'] or not reference or not line_ids"
+          >
+            <field name="line_ids" readonly="1">
+              <list create="false" delete="false" editable="top">
+                <field name="description" />
+                <field name="price" />
+                <field name="quantity" />
+                <field name="tax" />
+                <field name="amount" />
+              </list>
+            </field>
+          </group>
+        </div>
+      </group>
+    </field>
+  </record>
+  <record id="view_document_extract_search" model="ir.ui.view">
+    <field name="name">invoices.document.extract.search</field>
+    <field name="model">ntbies.document.extract</field>
+    <field name="inherit_id" ref="ntbies_services.view_document_extract_search" />
+    <field name="arch" type="xml">
+      <field name="reference" position="after">
+        <field name="vendor_id" />
+      </field>
+    </field>
+  </record>
+  <record id="action_document_extract_bill" model="ir.actions.act_window">
+    <field name="name">Documents</field>
+    <field name="res_model">ntbies.document.extract</field>
+    <field name="view_mode">list,form</field>
+    <field name="domain">[('document_type', '=', 'bill')]</field>
+    <field name="view_id" ref="ntbies_services.view_document_extract_list" />
+  </record>
+</odoo>

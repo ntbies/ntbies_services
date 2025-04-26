@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ntbies_document_extract_buyer,access_ntbies_document_extract_buyer,model_ntbies_document_extract_buyer,base.group_user,1,1,1,1
+access_ntbies_document_extract_vendor,access_ntbies_document_extract_vendor,model_ntbies_document_extract_vendor,base.group_user,1,1,1,1
+access_ntbies_document_extract_lines,access_ntbies_document_extract_lines,model_ntbies_document_extract_lines,base.group_user,1,1,1,1

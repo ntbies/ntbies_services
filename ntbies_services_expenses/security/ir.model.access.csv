@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ntbies_document_extract_expense,access_ntbies_document_extract_expense,model_ntbies_document_extract_expense,base.group_user,1,1,1,1

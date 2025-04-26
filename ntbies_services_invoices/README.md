@@ -1,14 +1,14 @@
-# NTBIES Services for Odoo 18
+# NTBIES Services for Odoo 17
 
 ## Overview
 
-NTBIES Services modules for Odoo enables seamless integration with NTBIES services, allowing users to extract data from invoices and expenses and automatically integrate them into Odoo. This module fills the gap in the digitization module for the community versions of Odoo, aiming to simplify and automate the handling of vendor bills and expenses through digital extraction services.
+NTBIES Services module for Odoo enables seamless integration with NTBIES services, allowing users to extract data from invoices and expenses and automatically integrate them into Odoo. This module fills the gap in the digitization module for the community versions of Odoo, aiming to simplify and automate the handling of vendor bills and expenses through digital extraction services.
 
 ### Key Features
 
-- Automatic data extraction from bills and expenses.
+- Automatic data extraction from invoices and receipts.
 - Integration with NTBIES platform for advanced digitization.
-- Supports Odoo versions 18.
+- Supports Odoo versions 17.
 - Configurable settings for manual or automatic data extraction.
 - User account credit system for service usage.
 
@@ -19,13 +19,13 @@ NTBIES Services modules for Odoo enables seamless integration with NTBIES servic
 
 ## Installation
 
-1. Ensure that Odoo 18 is installed and running on your system.
+1. Ensure that Odoo is installed and running on your system.
 2. Have the `queue_job` module from OCA in your installable module if that's not yet the case. This is a dependency for the NTBIES Services module.
    - Clone the `queue` repository:
      ```bash
      git clone https://github.com/OCA/queue.git
      ```
-   - Make sure you are on branch 18.0
+   - Make sure you are on branch 17.0
    - Follow the installation instructions provided in the `queue` repository.
 3. Clone or download the NTBIES Services module into your Odoo addons directory.
 4. Update the Odoo module list and install the NTBIES Services module through the Odoo backend interface.
@@ -44,8 +44,8 @@ NTBIES Services modules for Odoo enables seamless integration with NTBIES servic
 
 ## Pricing
 
-- The extraction service is not free. Users must recharge credits on their NTBIES account to use the service.
-- **Pricing:** 1 euro equals 100 credits. The account balance can then be used to pay the processing. For document extraction, the cost is **5** credit par page.
+- The service is not free. Users must recharge credits on their NTBIES account to use the service.
+- **Pricing:** 1 euro equals 100 credits. The account balance can then be used to pay the processing. For document extraction, the cost is **8** credit par page.
 
 ## Future Enhancements
 

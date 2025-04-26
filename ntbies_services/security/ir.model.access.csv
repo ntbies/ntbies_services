@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ntbies_document_extract,access_ntbies_document_extract,model_ntbies_document_extract,base.group_user,1,1,1,1
+access_ntbies_document_import_wizard,access_ntbies_document_import_wizard,model_ntbies_document_import_wizard,base.group_user,1,1,1,1

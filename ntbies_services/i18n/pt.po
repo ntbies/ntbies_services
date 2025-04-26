@@ -1,0 +1,504 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ntbies_services
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-26 05:45+0000\n"
+"PO-Revision-Date: 2025-04-26 05:45+0000\n"
+"Last-Translator: Ntabuhashe Gerry <gerry@ntbies.com>\n"
+"Language: pt\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_ntbies_config_settings
+msgid "Access Key"
+msgstr "Chave de Acesso"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_needaction
+msgid "Action Needed"
+msgstr "Ação Necessária"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_ids
+msgid "Activities"
+msgstr "Atividades"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoração de Exceção de Atividade"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_state
+msgid "Activity State"
+msgstr "Estado da Atividade"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ícone do Tipo de Atividade"
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_ntbies_config_settings
+msgid "Allows you to access processing services provided by NTBIES."
+msgstr "Permite o acesso aos serviços de processamento fornecidos pela NTBIES."
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_document_extract_form
+msgid "Amount"
+msgstr "Valor"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__attachment_id
+msgid "Attachment"
+msgstr "Anexo"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contagem de Anexos"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__auto_create
+msgid "Auto Create"
+msgstr "Criação Automática"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__auto_extract
+msgid "Auto Extract"
+msgstr "Extração Automática"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__can_extract
+msgid "Can Extract"
+msgstr "Pode Extrair"
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_document_import_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_document_extract_form
+msgid "Check Extraction"
+msgstr "Verificar Extração"
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_ntbies_config_settings
+msgid "Check this field to enable automatic document data extraction"
+msgstr "Marque este campo para ativar a extração automática de dados de documentos"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract_contact_abstract__city
+msgid "City"
+msgstr "Cidade"
+
+#. module: ntbies_services
+#: model:ir.model,name:ntbies_services.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract_contact_abstract__company_name
+msgid "Company Name"
+msgstr "Nome da Empresa"
+
+#. module: ntbies_services
+#: model:ir.model,name:ntbies_services.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configurações"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract_contact_abstract__country
+msgid "Country"
+msgstr "País"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__create_uid
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_import_wizard__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__create_date
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_import_wizard__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__currency
+msgid "Currency"
+msgstr "Moeda"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__display_name
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_import_wizard__display_name
+msgid "Display Name"
+msgstr "Nome de Exibição"
+
+#. module: ntbies_services
+#: model:ir.model,name:ntbies_services.model_ntbies_document_extract
+msgid "Document"
+msgstr "Documento"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__document_date
+msgid "Document Date"
+msgstr "Data do Documento"
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_ntbies_config_settings
+msgid "Document Extraction"
+msgstr "Extração de Documento"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__document_reference
+msgid "Document Reference"
+msgstr "Referência do Documento"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__reference
+msgid "Document reference on Service platform"
+msgstr "Referência do documento na plataforma de serviços"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__document_type
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_import_wizard__document_type
+msgid "Document type"
+msgstr "Tipo de Documento"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_res_company__enable_auto_extraction
+#: model:ir.model.fields,field_description:ntbies_services.field_res_config_settings__enable_auto_extraction
+msgid "Enable Document Auto Extraction"
+msgstr "Ativar Extração Automática de Documentos"
+
+#. module: ntbies_services
+#: model:ir.model.fields.selection,name:ntbies_services.selection__ntbies_document_extract__status__error
+msgid "Error"
+msgstr "Erro"
+
+#. module: ntbies_services
+#: model:ir.model.fields.selection,name:ntbies_services.selection__ntbies_document_extract__status__extracted
+msgid "Extracted"
+msgstr "Extraído"
+
+#. module: ntbies_services
+#: model:ir.model,name:ntbies_services.model_ntbies_document_extract_contact_abstract
+msgid "Extracted Contact Abstract"
+msgstr "Resumo de Contato Extraído"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__extraction_date
+msgid "Extraction Date"
+msgstr "Data de Extração"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_import_wizard__attachment_ids
+msgid "Files"
+msgstr "Arquivos"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Parceiros)"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Ícone Font Awesome, ex.: fa-tasks"
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_document_extract_form
+msgid "Generate Record"
+msgstr "Gerar Registro"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__has_message
+msgid "Has Message"
+msgstr "Possui Mensagem"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__id
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_import_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_exception_icon
+msgid "Icon"
+msgstr "Ícone"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ícone para indicar uma atividade de exceção."
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Se marcado, novas mensagens exigem sua atenção."
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Se marcado, algumas mensagens têm erro de entrega."
+
+#. module: ntbies_services
+#: model:ir.model,name:ntbies_services.model_ntbies_document_import_wizard
+msgid "Import Documents for Extraction"
+msgstr "Importar Documentos para Extração"
+
+#. module: ntbies_services
+#: model:ir.actions.act_window,name:ntbies_services.action_open_document_import_wizard
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_document_import_wizard_form
+msgid "Import documents"
+msgstr "Importar documentos"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_is_follower
+msgid "Is Follower"
+msgstr "É Seguidor"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__is_readonly
+msgid "Is Readonly"
+msgstr "É Somente Leitura"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__write_uid
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_import_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__write_date
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_import_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract_contact_abstract__line_1
+msgid "Line 1"
+msgstr "Linha 1"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract_contact_abstract__line_2
+msgid "Line 2"
+msgstr "Linha 2"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Anexo Principal"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_has_error
+msgid "Message Delivery error"
+msgstr "Erro de Entrega de Mensagem"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_ids
+msgid "Messages"
+msgstr "Mensagens"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Prazo da Minha Atividade"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_res_company__ntbies_access_key
+#: model:ir.model.fields,field_description:ntbies_services.field_res_config_settings__ntbies_access_key
+msgid "NTBIES Access Key"
+msgstr "Chave de Acesso NTBIES"
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_ntbies_config_settings
+msgid "NTBIES Services"
+msgstr "Serviços NTBIES"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: ntbies_services
+#: model:ir.model.fields.selection,name:ntbies_services.selection__ntbies_document_extract__status__new
+msgid "New"
+msgstr "Novo"
+
+#. module: ntbies_services
+#. odoo-python
+#: code:addons/ntbies_services/wizards/document_import_wizard.py:0
+msgid "New Document"
+msgstr "Novo Documento"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Prazo da Próxima Atividade"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumo da Próxima Atividade"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipo da Próxima Atividade"
+
+#. module: ntbies_services
+#: model:ir.model,name:ntbies_services.model_ntbies_service
+msgid "Ntbies Service Abstract"
+msgstr "Resumo do Serviço NTBIES"
+
+#. module: ntbies_services
+#: model:ir.model,name:ntbies_services.model_ntbies_service_extract
+msgid "Ntbies Service Extract abstract"
+msgstr "Resumo da Extração de Serviço NTBIES"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de Ações"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de Erros"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de Mensagens Requerendo Ação"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de Mensagens com Erro de Entrega"
+
+#. module: ntbies_services
+#. odoo-python
+#: code:addons/ntbies_services/wizards/document_import_wizard.py:0
+msgid ""
+"Only PDF, PNG, JPG/JPEG, TIFF and BMP images are allowed.\n"
+"All the following documents do not meet these requirements:\n"
+"- {}"
+msgstr "Apenas imagens PDF, PNG, JPG/JPEG, TIFF e BMP são permitidas.\nOs seguintes documentos não atendem a esses requisitos:\n- {}"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__pages
+msgid "Pages"
+msgstr "Páginas"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract_contact_abstract__partner_id
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract_contact_abstract__postal_code
+msgid "Postal Code"
+msgstr "Código Postal"
+
+#. module: ntbies_services
+#: model:ir.model.fields.selection,name:ntbies_services.selection__ntbies_document_extract__status__processed
+msgid "Processed"
+msgstr "Processado"
+
+#. module: ntbies_services
+#: model:ir.model.fields.selection,name:ntbies_services.selection__ntbies_document_extract__status__processing
+msgid "Processing"
+msgstr "Processando"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__reference
+msgid "Reference"
+msgstr "Referência"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__activity_user_id
+msgid "Responsible User"
+msgstr "Usuário Responsável"
+
+#. module: ntbies_services
+#: model:ir.actions.server,name:ntbies_services.action_process_document_run_extract
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_document_extract_form
+msgid "Run Extraction"
+msgstr "Executar Extração"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract_contact_abstract__state
+msgid "State"
+msgstr "Estado"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__status
+msgid "Status"
+msgstr "Status"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "Status baseado em atividades\nAtrasado: a data de vencimento já passou\nHoje: a data da atividade é hoje\nPlanejado: atividades futuras."
+
+#. module: ntbies_services
+#. odoo-python
+#: code:addons/ntbies_services/services/ntbies_service.py:0
+msgid "The access key related to this document has not yet been configured"
+msgstr "A chave de acesso relacionada a este documento ainda não foi configurada"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__document_type
+msgid ""
+"This field is important as it helps to decide which extraction model should "
+"be used"
+msgstr "Este campo é importante, pois ajuda a decidir qual modelo de extração deve ser usado"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_import_wizard__document_type
+msgid ""
+"This field is important as it helps to know which model to use for document "
+"processing"
+msgstr "Este campo é importante, pois ajuda a saber qual modelo usar para o processamento do documento"
+
+#. module: ntbies_services
+#: model:ir.model.fields,field_description:ntbies_services.field_ntbies_document_extract__total_amount
+msgid "Total Amount"
+msgstr "Valor Total"
+
+#. module: ntbies_services
+#: model:ir.model.fields,help:ntbies_services.field_ntbies_document_extract__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo da atividade de exceção no registro."
+
+#. module: ntbies_services
+#: model_terms:ir.ui.view,arch_db:ntbies_services.view_document_extract_form
+msgid ""
+"You are about to generate the record in the system. Once done, this file "
+"can't be modified. Proceed?"
+msgstr "Você está prestes a gerar o registro no sistema. Após concluído, este arquivo não poderá ser modificado. Deseja prosseguir?"
