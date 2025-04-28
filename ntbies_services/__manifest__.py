@@ -36,7 +36,7 @@
     "images": ["static/description/icon.png", "static/description/settings.png"],
     "installable": True,
     "application": True,
-    "auto_install": True,
+    "auto_install": ["base"],
 }
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
